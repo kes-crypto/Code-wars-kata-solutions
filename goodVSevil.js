@@ -1,4 +1,4 @@
-//Description
+/*Description
 Middle Earth is about to go to war. The forces of good will have many battles with the forces of evil. Different races will certainly be involved. Each race has a certain worth when battling against others. On the side of good we have the following races, with their associated worth:
 
 Hobbits: 1
@@ -29,7 +29,7 @@ Hobbits, Men, Elves, Dwarves, Eagles, Wizards.
 The second parameter will contain the count of each race on the side of evil in the following order:
 
 Orcs, Men, Wargs, Goblins, Uruk Hai, Trolls, Wizards.
-All values are non-negative integers. The resulting sum of the worth for each side will not exceed the limit of a 32-bit integer.//
+All values are non-negative integers. The resulting sum of the worth for each side will not exceed the limit of a 32-bit integer.*/
 
 function goodVsEvil(good, evil) {
   var worth = [ [1, 2, 3, 3, 4, 10], [1, 2, 2, 2, 3, 5, 10] ];
