@@ -24,3 +24,22 @@ const decode = str => [...str].map(e => v4w2ls.includes(e) ? e = vowels[v4w2ls.i
 
 (defn encode [s] (apply str (map #(get e % %) s)))
 (defn decode [s] (apply str (map #(get d (- (int %) (int \1)) %) s)))
+
+ //sol 4
+ function encode(string) {
+  string = string.replaceAll(/a/gi,"1");
+  string = string.replaceAll(/e/gi,"2");
+  string = string.replaceAll(/i/gi,"3");
+  string = string.replaceAll(/o/gi,"4");
+  string = string.replaceAll(/u/gi,"5");
+  return string;
+}
+
+function decode(string) {
+  string = string.replaceAll(/1/gi,"a");
+  string = string.replaceAll(/2/gi,"e");
+  string = string.replaceAll(/3/gi,"i");
+  string = string.replaceAll(/4/gi,"o");
+  string = string.replaceAll(/5/gi,"u");
+  return string
+}
