@@ -25,7 +25,7 @@ const decode = str => [...str].map(e => v4w2ls.includes(e) ? e = vowels[v4w2ls.i
 (defn encode [s] (apply str (map #(get e % %) s)))
 (defn decode [s] (apply str (map #(get d (- (int %) (int \1)) %) s)))
 
- //sol 4
+ //sol 
  function encode(string) {
   string = string.replaceAll(/a/gi,"1");
   string = string.replaceAll(/e/gi,"2");
