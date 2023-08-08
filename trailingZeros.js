@@ -16,3 +16,21 @@ zeros(12) = 2
 # 12! = 479001600 --> 2 trailing zeros
 Hint: You're not meant to calculate the factorial. Find another way to find the number of zeros.
 */
+
+//sol 1
+function zeros (n) {
+  var zs = 0;
+  while(n>0){
+    n=Math.floor(n/5);
+    zs+=n
+  }
+  return zs;
+}
+
+//sol 2
+function zeros (n) {
+  var res = 0;
+  for(var i=5; i<n; i*=5)
+    res += Math.floor(n/i);
+  return res;
+}
