@@ -34,3 +34,12 @@ function zeros (n) {
     res += Math.floor(n/i);
   return res;
 }
+//sol 3
+function zeros (n) {
+  return n < 5 ? 0 : Math.floor(n / 5) + zeros(n / 5);
+}
+//sol 4
+function zeros(n) {
+  for (var result = 0, i = 5; n >= i; i *= 5) result += 0 | n / i
+  return result
+}
