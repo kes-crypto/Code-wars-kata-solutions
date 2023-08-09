@@ -13,3 +13,9 @@ return sum;
 }
 console.log(addNumbers(6))
 //output 21
+
+//sol 2(not sure it works)
+ var erg = 0;
+   for(var i in arguments)
+       erg += arguments[i];
+   return erg; 
