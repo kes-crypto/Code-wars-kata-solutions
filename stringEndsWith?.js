@@ -21,3 +21,7 @@ function solution(str, ending){
 function solution(str, ending){
   return str.split('').filter((_, i) => i >= str.length - ending.length).join('') == ending ? true : false;
 }
+//soln 3
+function solution(str, ending){
+  return str.endsWith(ending);
+}
