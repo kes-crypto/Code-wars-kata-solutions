@@ -13,3 +13,24 @@ Example
 input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
 output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
 */
+
+//soln 1
+function openOrSenior(data){
+  // senior >55 >7
+  // senior <55 <7
+function determineMembership(member){
+    return (member[0] >= 55 && member[1] > 7) ? 'Senior' : 'Open';
+  }
+  return data.map(determineMembership);
+}
+//sol 2
+function openOrSenior(data){
+  // Senior = 55+ and 7+
+  var result = [];
+
+  for(var i = 0; i < data.length; i++){
+    result[i] = (data[i][0] >= 55 && data[i][1] > 7) ? 'Senior' : 'Open';
+  }
+
+  return result;
+}
