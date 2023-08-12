@@ -9,6 +9,8 @@ isIsogram "Dermatoglyphics" = true
 isIsogram "moose" = false
 isIsogram "aba" = false
 */
+
+//sol 1
 function isIsogram(str){
 
   // Turn all letters of the string to lower case and split it into an array. 
@@ -33,4 +35,44 @@ function isIsogram(str){
     
   return letters.length === checkLetters.length ? true : false;
 
+}
+
+//sol 2
+function isIsogram(str){
+	return new Set(str.toUpperCase()).size == str.length;
+}
+//sol 3
+function isIsogram(str){ 
+  return !/(\w).*\1/i.test(str)
+}
+//z.
+//sol 4
+function isIsogram(str){
+  var i, j;
+  str = str.toLowerCase();
+  for(i = 0; i < str.length; ++i)
+    for(j = i + 1; j < str.length; ++j)
+      if(str[i] === str[j])
+        return false;
+  return true;
+}
+//sol 5
+function isIsogram(str){
+  // declare letters object
+  var letters = {};
+  var char, i;
+  var strLength = str.length;
+  // for each character in str
+  for (i = 0; i < strLength; i++) {
+    // set char to lowercase version
+    char = str[i].toLowerCase();
+    if (letters[char]) {
+      return false;
+    } else {
+      // set letters of char to true
+      letters[char] = true;
+    }
+  }
+  
+  return true;
 }
