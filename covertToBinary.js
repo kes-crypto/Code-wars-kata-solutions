@@ -14,3 +14,14 @@ function addBinary(a,b) {
   const result = sum.toString(2);
   return result;
 }
+
+//sol 2
+const addBinary = (a, b) => (a + b).toString(2);
+//sol 3
+function decimalToBinary(decimal){
+  return (decimal >>> 0).toString(2);
+}
+
+function addBinary(a,b) {
+  return decimalToBinary(a+b);
+}
