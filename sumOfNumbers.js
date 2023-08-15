@@ -21,6 +21,7 @@ function getSum(a, b) {
     sum += i;
   }
   return sum;
+  }
 
   //sol 2
   function GetSum( a,b )
@@ -30,4 +31,4 @@ function getSum(a, b) {
    else return a + GetSum(a-1,b);
 }
   
-}
+
