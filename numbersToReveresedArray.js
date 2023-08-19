@@ -6,6 +6,8 @@ Example(Input => Output):
 35231 => [1,3,2,5,3]
 0 => [0]
 */
+
+//sol 1
 function digitize(n) {
 const arrayOfDigits = String(n) .split('') .map(Number)
   const reversed = arrayOfDigits.reverse();
