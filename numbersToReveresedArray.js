@@ -17,3 +17,7 @@ const arrayOfDigits = String(n) .split('') .map(Number)
 function digitize(n) {
   return String(n).split('').map(Number).reverse()
 }
+//sol 3
+function digitize(n) {
+  return Array.from(String(n), Number).reverse();
+}
