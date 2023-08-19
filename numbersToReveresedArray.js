@@ -13,3 +13,7 @@ const arrayOfDigits = String(n) .split('') .map(Number)
   const reversed = arrayOfDigits.reverse();
   return reversed
 }
+//sol 2
+function digitize(n) {
+  return String(n).split('').map(Number).reverse()
+}
