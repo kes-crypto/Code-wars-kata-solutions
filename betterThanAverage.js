@@ -52,3 +52,9 @@ function betterThanAverage(classPoints, yourPoints) {
   	return true
   } 
 }
+//sol4
+const betterThanAverage = (classPoints, yourPoints) => yourPoints > average(classPoints);
+
+const average = array => sum(array) / array.length;
+
+const sum = array => array.reduce((a, b) => a + b);
