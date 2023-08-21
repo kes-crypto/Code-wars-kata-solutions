@@ -29,3 +29,13 @@ if(average < yourPoints){
 }
 console.log(betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 45))
 
+//sol2
+function betterThanAverage(classPoints, yourPoints) {
+  // Your code here
+  var classAvg = 0;
+  for (var i = 0; i < classPoints.length; i++){
+    classAvg += classPoints[i]; 
+  }
+  classAvg = classAvg/classPoints.length; 
+  return yourPoints > classAvg;
+}
