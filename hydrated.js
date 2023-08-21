@@ -19,3 +19,8 @@ function litres(time) {
   var up = Math.floor(water)
   return up
 }
+
+//sol1
+function litres(time) {
+  return Math.floor(time/2)
+}
