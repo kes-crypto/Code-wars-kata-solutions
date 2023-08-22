@@ -14,3 +14,5 @@ function boolToWord( bool ){
     return 'No';
   }
 }
+//sol3
+const boolToWord = bool => bool ? 'Yes' : 'No';
