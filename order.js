@@ -53,3 +53,12 @@ function order(words){
 function comparator(word, nextWord) {
   return +word.match(reg) - +nextWord.match(reg)
 }
+//sol5
+function order(words){
+  // ...
+  return words && words.split(' ')
+    .map(word => word.match(/\d/) + word)
+    .sort()
+    .map(word => word.slice(1))
+    .join(' ');
+}
