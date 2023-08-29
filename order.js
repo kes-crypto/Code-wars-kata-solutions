@@ -62,3 +62,21 @@ function order(words){
     .map(word => word.slice(1))
     .join(' ');
 }
+//sol6
+function order(words) {
+  if (!words) return '';
+  
+  var result = words.split(' ').map(word => {
+    var orderAsString = word.split('').filter(c => !isNaN(c))[0];
+    var order = Number(orderAsString);
+    
+    return {
+      "order": order,
+      "word": word
+    };
+  });
+  
+  result.sort((a, b) => a.order - b.order);
+  
+  return result.map(x => x.word).join(' ');
+}
