@@ -35,3 +35,21 @@ function order(words){
   }
   return sortedArray.join(' ');
 }
+
+//sol3
+function order(words){
+  
+  return words.split(' ').sort(function(a, b){
+      return a.match(/\d/) - b.match(/\d/);
+   }).join(' ');
+} 
+//soln 4
+var reg = /\d/;
+
+function order(words){
+  return words.split(' ').sort(comparator).join(' ');
+}
+
+function comparator(word, nextWord) {
+  return +word.match(reg) - +nextWord.match(reg)
+}
