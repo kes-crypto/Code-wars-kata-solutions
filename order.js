@@ -9,3 +9,15 @@ Examples
 "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
 "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
 */
+const order = words => {
+  const findNumber = words.match(/[1-9]/g);
+  const arrayWords = words.split(' ');
+  let result = [];
+  if (words.length === 0) return words;
+  
+  arrayWords.map((item, i) => {
+    const index = findNumber.indexOf(i+1));
+    result.push(arrayWords[index]);
+  });
+  return result.join(' ');
+}
