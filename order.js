@@ -80,3 +80,5 @@ function order(words) {
   
   return result.map(x => x.word).join(' ');
 }
+//sol7
+const order = words => words ? words.split(' ').sort((a,b) => a.match(/\d/) - b.match(/\d/)).join(' ') : '';
