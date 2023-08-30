@@ -14,3 +14,7 @@ const filteredArray = a.filter(function(x) {
   return b.indexOf(x) < 0});
   return filteredArray
 }
+//SOLN1
+function array_diff(a, b) {
+  return a.filter(e => !b.includes(e));
+}
