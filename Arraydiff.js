@@ -8,3 +8,9 @@ If a value is present in b, all of its occurrences must be removed from the othe
 
 arrayDiff([1,2,2,2,3],[2]) == [1,3]
 */
+//my soln
+function arrayDiff(a, b) {
+const filteredArray = a.filter(function(x) { 
+  return b.indexOf(x) < 0});
+  return filteredArray
+}
