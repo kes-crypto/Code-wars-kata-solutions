@@ -16,3 +16,9 @@ class SmallestIntegerFinder {
     return  parseInt(array)
   }
 }
+//sol1
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return args.sort((a,b)=>a-b)[0];
+  }
+}
