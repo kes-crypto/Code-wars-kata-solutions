@@ -22,3 +22,9 @@ class SmallestIntegerFinder {
     return args.sort((a,b)=>a-b)[0];
   }
 }
+//sol2
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return Math.min.apply(null, args);
+  }
+}
