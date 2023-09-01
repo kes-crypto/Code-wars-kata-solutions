@@ -9,3 +9,5 @@ function solution(s){
     o += s[i];
   return o;
 }
+//sol2
+let solution = str => [...str].reverse().join('');
