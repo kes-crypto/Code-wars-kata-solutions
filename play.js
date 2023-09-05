@@ -14,3 +14,6 @@ function areYouPlayingBanjo(name) {
 function areYouPlayingBanjo(name) {
   return name + (/^r/i.test(name) ? " plays " : " does not play ") + "banjo";
 }
+
+
+const areYouPlayingBanjo = name => name.startsWith('R') || name.startsWith('r') ? `${name} plays banjo` : `${name} does not play banjo`
