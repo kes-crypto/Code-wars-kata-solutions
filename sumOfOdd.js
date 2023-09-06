@@ -20,3 +20,5 @@ function rowSumOddNumbers(n) {
 function rowSumOddNumbers(n) {
 	return n*n*n
 }
+//sol3
+let rowSumOddNumbers = n => n ** 3;
