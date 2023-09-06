@@ -16,3 +16,7 @@ Calculate the sum of the numbers in the nth row of this triangle (starting at in
 function rowSumOddNumbers(n) {
   return Math.pow(n, 3);
 }
+//sol2
+function rowSumOddNumbers(n) {
+	return n*n*n
+}
