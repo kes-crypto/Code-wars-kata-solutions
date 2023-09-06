@@ -40,3 +40,13 @@ function rowSumOddNumbers(n) {
 	// TODO
   return n > 0 ? n * n * n : "Wrong Input"
 }
+//sol6
+function rowSumOddNumbers(n) {
+  var result = 0;
+  
+  for (var i = 0; i < n; i++) {
+    result += n * n - n + 2 * i + 1;
+  }
+
+  return result;
+}
