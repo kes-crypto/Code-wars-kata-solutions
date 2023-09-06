@@ -34,3 +34,9 @@ function rowSumOddNumbers(n) {
     
    return result;
 }
+
+//sol5
+function rowSumOddNumbers(n) {
+	// TODO
+  return n > 0 ? n * n * n : "Wrong Input"
+}
