@@ -50,3 +50,5 @@ function rowSumOddNumbers(n) {
 
   return result;
 }
+//sol7
+function rowSumOddNumbers(n) {return n**2*n}
