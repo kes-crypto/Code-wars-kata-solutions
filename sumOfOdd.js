@@ -52,3 +52,19 @@ function rowSumOddNumbers(n) {
 }
 //sol7
 function rowSumOddNumbers(n) {return n**2*n}
+//sol8
+function rowSumOddNumbers(n) {
+	const startNum = n * (n-1) + 1;
+    const rowArr = [startNum];
+
+		
+    for (let i = 0; i < n - 1; i++) {
+			rowArr.push(rowArr[i] + 2);      
+    }
+
+		var sum = rowArr.reduce(function(a, b){
+			return a + b;
+		}, 0);
+
+    return sum;
+}
