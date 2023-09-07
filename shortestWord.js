@@ -45,3 +45,10 @@ const findShort = (s) => s
 function findShort(s) {
   return s.split(' ').reduce((min, word) => Math.min(min, word.length), Infinity);
 }
+//sol7
+function findShort(s){
+  return s
+    .split(' ')
+    .map(a => a.length)
+    .reduce((a, b) => Math.min(a, b))
+}
