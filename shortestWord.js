@@ -31,3 +31,7 @@ function findShort(s){
 	}
 	return smallest.length;
 }
+//sol4
+function findShort(s){
+  return Math.min.apply(null, s.split(' ').map(w => w.length));
+}
