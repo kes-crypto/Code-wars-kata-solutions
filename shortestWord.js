@@ -60,3 +60,7 @@ function findShort(s){
 function findShort(s){
   return Math.min(...s.split(" ").map(word=>word.length));
 }
+//sln10
+function findShort(str){
+  return Math.min.apply(null, str.split(' ').map(word => word.length));
+}
