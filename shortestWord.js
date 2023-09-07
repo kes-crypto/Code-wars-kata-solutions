@@ -16,3 +16,7 @@ function findShort(s){
   return result
   return Math.min(result)
 }
+//sol2
+function findShort(s){
+    return Math.min(...s.split(" ").map (s => s.length));
+}
