@@ -52,3 +52,7 @@ function findShort(s){
     .map(a => a.length)
     .reduce((a, b) => Math.min(a, b))
 }
+//sol8
+function findShort(s){
+  return Math.min(...s.split(/\s/).map((w) => w.length));
+}
