@@ -35,3 +35,9 @@ function findShort(s){
 function findShort(s){
   return Math.min.apply(null, s.split(' ').map(w => w.length));
 }
+//sol5
+const findShort = (s) => s
+  .split(' ')
+  .sort((a, b) => b.length - a.length)
+  .pop()
+  .length;
