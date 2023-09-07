@@ -41,3 +41,7 @@ const findShort = (s) => s
   .sort((a, b) => b.length - a.length)
   .pop()
   .length;
+//sol6
+function findShort(s) {
+  return s.split(' ').reduce((min, word) => Math.min(min, word.length), Infinity);
+}
