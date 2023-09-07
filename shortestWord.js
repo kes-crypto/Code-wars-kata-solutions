@@ -56,3 +56,7 @@ function findShort(s){
 function findShort(s){
   return Math.min(...s.split(/\s/).map((w) => w.length));
 }
+//sol9
+function findShort(s){
+  return Math.min(...s.split(" ").map(word=>word.length));
+}
