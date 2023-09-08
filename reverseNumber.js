@@ -14,3 +14,5 @@ function descendingOrder(n){
     let intResult = ~~stringResult; // double bitwise operator to turn str to int
     return intResult; // return final int
 }
+//sol2
+const descendingOrder = (a) => ~~Array.from(a.toString()).sort().reverse().join("");
