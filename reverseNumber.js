@@ -16,3 +16,7 @@ function descendingOrder(n){
 }
 //sol2
 const descendingOrder = (a) => ~~Array.from(a.toString()).sort().reverse().join("");
+//sol3
+function descendingOrder(n){
+  return parseInt(String(n).split('').sort().reverse().join(''))
+}
