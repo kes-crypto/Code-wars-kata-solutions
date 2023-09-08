@@ -9,3 +9,5 @@ Function should return true if it is possible and false if not.
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
    return distanceToPump <= (mpg * fuelLeft) ? true: false; 
 };
+//sol1
+zeroFuel = (_,__,___) => ___*__>=_
