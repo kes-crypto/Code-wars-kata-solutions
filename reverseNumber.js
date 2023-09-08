@@ -46,3 +46,5 @@ function descendingOrder(n){
             .join('')
           );
 }
+//mine
+const descendingOrder = (a) => Number([...("" + a)].sort().reverse().join(""));
