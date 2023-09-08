@@ -28,3 +28,9 @@ function descendingOrder(n) {
 function descendingOrder(n) {
   return parseInt(n.toString().split("").sort().reverse().join(""));
 }
+//sol6
+function descendingOrder(n){
+  return parseInt(n.toString().split('').sort(function(a, b){
+    return b - a;
+  }).join(''));
+}
