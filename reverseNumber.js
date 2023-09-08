@@ -8,3 +8,9 @@ Input: 145263 Output: 654321
 
 Input: 123456789 Output: 987654321
 */
+function descendingOrder(n){
+   let b = Array.from(n.toString()).map(Number); // map int into array
+    let stringResult = b.sort().reverse().join(""); // sort in ascending, then reverse & join
+    let intResult = ~~stringResult; // double bitwise operator to turn str to int
+    return intResult; // return final int
+}
