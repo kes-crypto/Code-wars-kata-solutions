@@ -34,3 +34,15 @@ function descendingOrder(n){
     return b - a;
   }).join(''));
 }
+//sol7
+function descendingOrder(n){
+  
+  n = [...n.toString()];
+  
+  return Number(
+            n
+            .sort()
+            .reverse()
+            .join('')
+          );
+}
