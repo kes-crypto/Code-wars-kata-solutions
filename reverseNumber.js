@@ -20,3 +20,7 @@ const descendingOrder = (a) => ~~Array.from(a.toString()).sort().reverse().join(
 function descendingOrder(n){
   return parseInt(String(n).split('').sort().reverse().join(''))
 }
+//sol4
+function descendingOrder(n) {
+  return +n.toString().split('').sort().reverse().join('');
+}
