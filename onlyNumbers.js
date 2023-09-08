@@ -16,3 +16,7 @@ function filter_list(l) {
 function filter_list(l) {
   return l.filter(function(v) {return typeof v == 'number'})
 }
+//sol3
+function filter_list(l) {
+ return l.filter(v => typeof v == "number")
+}
