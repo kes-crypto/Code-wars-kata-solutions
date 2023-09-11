@@ -74,3 +74,34 @@ const getNumberOfWays = (steps, maxJumpLength) => {
 
   return ways[steps];
 };
+//sol4
+const getNumberOfWays = (steps, maxJumpLength) => {
+  let n = steps;
+  let ways = Array.from({ length: maxJumpLength }, (_, i) => BigInt(2 ** i));
+
+  while (ways.length < n) {
+    ways.push(ways.reduce((a, b) => a + b));
+    ways.shift();
+    n--;
+  }
+  
+  return ways[--n]
+}
+//sol5
+const getNumberOfWays = (steps, maxJumpLength) => {
+  
+  let ways = new Array(steps + 1);
+  let sum_ways = 1n, lo = 0;
+  
+  for(let i = 0; i <= steps; ++i) ways[i] = 0n;
+ 
+  ways[0] = 1n;
+  
+  for(let i = 1; i <= steps; ++i) {
+    ways[i] = sum_ways;
+    sum_ways += ways[i];
+    if(i + 1 - lo > maxJumpLength) sum_ways -= ways[lo++];
+  }
+  
+  return ways[steps];
+}
