@@ -62,3 +62,15 @@ const getNumberOfWays = (steps, maxJumpLength) => {
   return numberOfWays.pop();
 };
 //sol3
+const getNumberOfWays = (steps, maxJumpLength) => {
+  const ways = Array(steps + 1).fill(BigInt(0));
+  ways[0] = BigInt(1);
+
+  for (let i = 1; i <= steps; i++) {
+    for (let j = 1; j <= maxJumpLength && j <= i; j++) {
+      ways[i] += ways[i - j];
+    }
+  }
+
+  return ways[steps];
+};
