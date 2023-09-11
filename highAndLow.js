@@ -18,3 +18,8 @@ function highAndLow(numbers) {
   var low = sorted[0]
   return high low
   }
+//sol1
+function highAndLow(numbers){
+  numbers = numbers.split(" ");
+  return Math.max(...numbers) +" "+ Math.min(...numbers);
+}
