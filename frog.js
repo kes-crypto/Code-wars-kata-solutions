@@ -19,3 +19,19 @@ Function should return a number - BigInt (because some results can be really big
 All inputs will be valid. maxJumpLength can be bigger than steps but you should consider the real amount of steps passed over.
 Good luck!
 */
+//sol1
+const getNumberOfWays = (steps, maxJumpLength) => {
+
+  let n = steps;
+  let ways = Array.from({ length: maxJumpLength }, (_, i) => BigInt(2 ** i));
+
+  while (ways.length < n) {
+    ways.push(ways.reduce((a, b) => a + b));
+    ways.shift();
+    n--;
+  }
+  
+  return ways[n - 1];
+  
+}
+//sol2
