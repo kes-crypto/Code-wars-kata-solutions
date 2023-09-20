@@ -26,3 +26,7 @@ function abbrevName(name){
 function abbrevName(name){
    return name.split(" ").map(el => el[0].toUpperCase()).join(".")
 }
+//sol4
+function abbrevName(name){
+    return name.split(" ").map(el => el.substring(0,1).toUpperCase()).join(".")
+}
