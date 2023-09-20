@@ -30,3 +30,7 @@ function abbrevName(name){
 function abbrevName(name){
     return name.split(" ").map(el => el.substring(0,1).toUpperCase()).join(".")
 }
+//sol5
+function abbrevName(name){
+   return name.match(/\b(\w)/g).toString().toUpperCase().replace(',', '.');
+}
