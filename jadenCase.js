@@ -40,3 +40,8 @@ String.prototype.toJadenCase = function () {
   }
   return x;
 };
+//sol5
+String.prototype.toJadenCase = function () {
+  return this.split(' ').
+    map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
+};
