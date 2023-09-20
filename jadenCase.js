@@ -45,3 +45,24 @@ String.prototype.toJadenCase = function () {
   return this.split(' ').
     map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
 };
+//sol6
+String.prototype.toJadenCase = function () {
+  
+  if(!this.toString() || this.toString === "") {
+  	return "";
+  }
+  
+  //splitting the string into an array 
+  var splitArray = this.toString().split(" ");
+  
+  //looping through the string to capitolize each word and
+  //storing it back in the array
+  for(var i = 0; i < splitArray.length; i++) {
+  	var word = splitArray[i];
+  	var capitolizedWord = word.charAt(0).toUpperCase() + word.slice(1);
+  	splitArray[i] = capitolizedWord;
+  }
+  
+  //joining the split strings into a string
+  return splitArray.join(" ");
+};
