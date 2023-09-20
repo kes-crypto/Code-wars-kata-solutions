@@ -26,3 +26,17 @@ String.prototype.toJadenCase = function () {
 
   return words.join(' ');
 };
+//sol4
+String.prototype.toJadenCase = function () {
+  var x = '';
+  x += this[0].toUpperCase();
+  for (var i = 1; i < this.length; i++) {
+    if (this.charAt(i) == " ") {
+      x += (this[i] + this[i + 1].toUpperCase());
+      i++; // Increment i to stop the function concatenating the first letter of a new word twice
+    } else {
+      x += this[i];
+    }
+  }
+  return x;
+};
