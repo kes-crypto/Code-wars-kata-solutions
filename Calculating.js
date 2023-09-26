@@ -3,6 +3,7 @@ Description:
 This time we want to write calculations using functions and get the results. Let's have a look at some examples:
 
 JavaScript:
+calculation.js
 
 seven(times(five())); // must return 35
 four(plus(nine())); // must return 13
