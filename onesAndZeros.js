@@ -51,3 +51,7 @@ const binaryArrayToNumber = arr => {
 };
 //sol3
 const binaryArrayToNumber = arr => parseInt(arr.join(''), 2)
+//sol4
+const binaryArrayToNumber = arr => {
+  return arr.reduce((value, total)=> value * 2 + total)
+};
