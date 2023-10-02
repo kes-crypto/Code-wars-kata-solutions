@@ -21,3 +21,7 @@ const binaryArrayToNumber = arr => {
    const binaryString = arr.join("");
    return parseInt(binaryString, 2);
 };
+
+
+//sol1
+const binaryArrayToNumber = arr => parseInt(arr.join(''), 2);
