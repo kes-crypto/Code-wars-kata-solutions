@@ -49,3 +49,5 @@ const binaryArrayToNumber = arr => {
 
   
 };
+//sol3
+const binaryArrayToNumber = arr => parseInt(arr.join(''), 2)
