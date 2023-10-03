@@ -12,9 +12,9 @@ function stringToArray(string){
  return arr
 
 }
-
+//sol1
 const stringToArray = string => string.split(' ');
-
+//sol2
 function stringToArray(string){
     var result = [];
     var traverse = function foo(string){
