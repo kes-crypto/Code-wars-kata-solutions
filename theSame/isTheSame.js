@@ -28,3 +28,24 @@ If a or b are nil (or null or None, depending on the language), the problem does
 Note for C
 The two arrays have the same size (> 0) given as parameter in function comp.
 */
+const comp = (a, b) => {
+    function sortNumber(n1, n2) {
+        return n1 - n2;
+    }
+    if (a === [] || b === [] || a === {} || b === {} || a === null || b === null) {
+        return false
+    } else {
+        a = a.sort(sortNumber)
+        b = b.sort(sortNumber)
+    }
+    for (let i = 0; i < a.length; i++) {
+        for (let i = 0; i < b.length; i++) {
+            if (Math.pow(a[i], 2) === b[i]) {
+                return true
+            } else {
+                return false
+            }
+
+        }
+    }
+}
