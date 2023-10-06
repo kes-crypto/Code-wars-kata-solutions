@@ -49,3 +49,24 @@ const comp = (a, b) => {
         }
     }
 }
+//sol2
+const comp = (a, b) => {
+  if (
+    a === null ||
+    b === null ||
+    a.length === 0 ||
+    b.length === 0 ||
+    a.length !== b.length
+  ) {
+    return false;
+  }
+
+  let status = true;
+  let i = 0;
+  while (status && i < a.length) {
+    status = b.indexOf(Math.pow(a[i],2)) > -1
+    i++;
+  }
+
+  return status;
+};
