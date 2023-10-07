@@ -18,3 +18,18 @@ A word (string) of length 0 < str < 1000 (In javascript you may get slightly mor
 
 The middle character(s) of the word represented as a string.
 */
+ function extractMiddle(str) {
+
+        var position;
+        var length;
+
+        if(str.length % 2 == 1) {
+            position = str.length / 2;
+            length = 1;
+        } else {
+            position = str.length / 2 - 1;
+            length = 2;
+        }
+
+        return str.substring(position, position + length)
+    }
