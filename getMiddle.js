@@ -52,3 +52,8 @@ function getMiddle(string) {
     return string.charAt(middleIndex);
   }
 }
+//sol4
+function getMiddle(s)
+{
+    return s.length % 2 == 0 ? s.charAt((s.length-1) / 2) + s.charAt((s.length+1) / 2) : s.charAt(s.length / 2);
+}
