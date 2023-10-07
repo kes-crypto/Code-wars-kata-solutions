@@ -91,3 +91,19 @@ function comp(array1, array2) {
 function comp(array1, array2){
   return !!array2 && !!array1 && array2.every( a=> array1.some( (b,i)=> a===b*b && delete array1[i] ) )  
 }
+//sol5
+function comp(array1, array2) {
+  
+  if(array1 == null || array2 == null) {
+    return false
+  }
+  array1.sort((a, b) => a-b)
+  array2.sort((a, b) => a-b)
+
+  for(let i = 0; i < array1.length; i++) {
+    if(array2[i] !== array1[i] * array1[i]) {
+      return false
+    }
+  }
+  return true
+}
