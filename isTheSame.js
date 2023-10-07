@@ -87,3 +87,7 @@ function comp(array1, array2) {
   array2.sort((a, b) => a - b);
   return array1.every((item, index) => item * item == array2[index]);
 }
+//sol4
+function comp(array1, array2){
+  return !!array2 && !!array1 && array2.every( a=> array1.some( (b,i)=> a===b*b && delete array1[i] ) )  
+}
