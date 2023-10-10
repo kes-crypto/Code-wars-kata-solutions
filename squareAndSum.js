@@ -37,3 +37,11 @@ function squareSum(numbers){
 function squareSum(numbers){
   return numbers.reduce((sum,num) => sum + (num * num), 0);
 }
+//sol2
+function squareSum(numbers){
+  var sum = 0;
+  numbers.forEach(function(n) {
+    sum += n * n
+  });
+  return sum;
+}
