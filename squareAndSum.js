@@ -33,3 +33,7 @@ function squareSum(numbers){
 
     return sum;
 }
+//sol1
+function squareSum(numbers){
+  return numbers.reduce((sum,num) => sum + (num * num), 0);
+}
