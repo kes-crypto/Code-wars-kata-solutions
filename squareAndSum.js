@@ -53,3 +53,5 @@ function squareSum(numbers){
   }
   return result;
 }
+//sol4
+const squareSum = numbers => numbers.reduce((a, b)=> a + b**2, 0)
