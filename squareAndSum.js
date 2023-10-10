@@ -55,3 +55,13 @@ function squareSum(numbers){
 }
 //sol4
 const squareSum = numbers => numbers.reduce((a, b)=> a + b**2, 0)
+//sol5
+function squareSum(numbers)
+{ 
+  var totalSum = 0;
+  for (i=0;i<numbers.length;i++)
+  {
+    totalSum += Math.pow(numbers[i], 2);
+  }
+  return totalSum;
+}
