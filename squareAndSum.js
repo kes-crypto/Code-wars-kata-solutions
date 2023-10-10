@@ -65,3 +65,5 @@ function squareSum(numbers)
   }
   return totalSum;
 }
+//sol5
+let squareSum=n=>n.reduce((s,a)=>s+a*a,0);
