@@ -20,3 +20,16 @@ For example, for [1, 2, 2] it should return 9 because
 2
  =9.
 */
+function squareSum(numbers){
+  ret= [];
+
+    for (var i = 0, len = numbers.length; i < len; i++) {
+        ret.push(numbers[i] * numbers[i]);
+    }
+  let sum = 0
+  ret.forEach( num => {
+  sum += num;
+})
+
+    return sum;
+}
