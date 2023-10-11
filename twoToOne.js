@@ -53,3 +53,7 @@ function longest(s1, s2) {
     }
     return output.join('');
 }
+//sol5
+function longest(s1, s2) {
+  return (s1+s2).split('').sort().join('').replace(/(.)\1+/g, '$1');
+}
