@@ -31,11 +31,25 @@ function longest(s1, s2) {
 }
 //sol3
 function longest(s1, s2) {
-  // your code
+  
   s3 = s1 + s2;
   s4 = s3.split("");
   s4 = s4.sort().filter(function(element, index, array){
     return element !== array[index - 1];
   });
   return s4.join("");
+}
+//sol4
+function longest(s1, s2) {
+    let output = [];
+    let combi = s1.concat(s2);
+    let array = combi.split('').sort();
+ 
+    for (let i = 0; i <= array.length; i++) {
+        console.log(array[i]);//test
+        if (!output.includes(array[i]) ) {
+              output.push(array[i]);
+        }
+    }
+    return output.join('');
 }
