@@ -57,3 +57,9 @@ function longest(s1, s2) {
 function longest(s1, s2) {
   return (s1+s2).split('').sort().join('').replace(/(.)\1+/g, '$1');
 }
+//sol6
+const longest = (s1, s2) => s1.concat(s2)
+    .split('')
+    .sort()
+    .filter((item, pos, self) => self.indexOf(item) == pos)
+    .join('');
