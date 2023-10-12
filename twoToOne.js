@@ -29,7 +29,7 @@ const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
 function longest(s1, s2) {
   return Array.from(new Set(s1 + s2)).sort().join('');
 }
-//sol3
+//sol 3
 function longest(s1, s2) {
   
   s3 = s1 + s2;
