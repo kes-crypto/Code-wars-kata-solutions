@@ -39,7 +39,7 @@ function longest(s1, s2) {
   });
   return s4.join("");
 }
-//sol4
+//sol 4
 function longest(s1, s2) {
     let output = [];
     let combi = s1.concat(s2);
