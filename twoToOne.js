@@ -23,7 +23,7 @@ const longest = (str1 = '', str2 = '') => {
    }
    return (res.join(''));
 };
-//sol1
+//sol 1
 const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
 //sol2
 function longest(s1, s2) {
