@@ -20,6 +20,7 @@ data.forEach(element => {
 //reduce
 function removeDuplicates(data){
   let unique = data.reduce(function(a,b){
-    
+    if(a.indexOf(b) < 0)a.push(b)
+    return a 
   } )
 }
