@@ -7,3 +7,13 @@ function removeDuplicates(data){
   return [...new Set(data)]
 }
 //for each loop
+function removeDuplicates(data){
+let unique = []
+
+data.forEach(element => {
+  if(!unique.includes(element)){
+    unique.push(element)
+  }
+}) 
+  return unique
+}
