@@ -17,3 +17,7 @@ data.forEach(element => {
 }) 
   return unique
 }
+//reduce
+function removeDuplicates(data){
+  
+}
