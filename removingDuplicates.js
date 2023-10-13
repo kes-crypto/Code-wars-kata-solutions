@@ -19,5 +19,7 @@ data.forEach(element => {
 }
 //reduce
 function removeDuplicates(data){
-  
+  let unique = data.reduce(function(a,b){
+    
+  } )
 }
