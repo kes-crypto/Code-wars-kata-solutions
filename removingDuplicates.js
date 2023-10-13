@@ -6,3 +6,4 @@ function removeDuplicates(data){
 function removeDuplicates(data){
   return [...new Set(data)]
 }
+//for each loop
