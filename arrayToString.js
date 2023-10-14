@@ -24,3 +24,8 @@ function smash (words) {
     }
     return smashed;
 };
+//sol3
+function smash (words) {
+    "use strict";
+    return words.join(" ").trim();    
+};
