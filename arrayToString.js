@@ -8,3 +8,7 @@ Example
 function smash (words) {
    return words.toString().replaceAll(',',' ')
 };
+//sol1
+smash = function (words) {
+  return words.join(" ");
+};
