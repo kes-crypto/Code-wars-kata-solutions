@@ -8,7 +8,7 @@ longest(a, b) -> "abcdefklmopqwxy"
 
 a = "abcdefghijklmnopqrstuvwxyz"
 longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
-*/
+*//
 
 const longest = (str1 = '', str2 = '') => {
    const combined = str1.concat(str2);
