@@ -26,3 +26,5 @@ function sumArray(array) {
     return total;
   }
 }
+//sol2
+sumArray = a => a ? a.sort((x, y) => x - y).slice(1, -1).reduce((s, e) => s + e, 0) : 0
