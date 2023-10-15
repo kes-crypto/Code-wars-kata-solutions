@@ -34,3 +34,12 @@ function sumArray(array) {
     ? array.reduce((s, n) => s + n, 0) - Math.min(...array) - Math.max(...array)
     : 0
 }
+//sol4
+const sumArray = (numbers) => (
+  numbers && numbers.length > 1
+    ? numbers
+      .sort((a, b) => a - b)
+      .slice(1, -1)
+      .reduce((sum, number) => sum + number, 0)
+    : 0
+);
