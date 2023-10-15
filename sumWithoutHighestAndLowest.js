@@ -43,3 +43,11 @@ const sumArray = (numbers) => (
       .reduce((sum, number) => sum + number, 0)
     : 0
 );
+//sol5
+function sumArray(array) {
+  array = array || [];
+  return array
+    .sort((a, b) => a - b)
+    .slice(1, -1)
+    .reduce((a, b) => a + b, 0);
+}
