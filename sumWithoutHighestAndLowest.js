@@ -51,3 +51,13 @@ function sumArray(array) {
     .slice(1, -1)
     .reduce((a, b) => a + b, 0);
 }
+//sol6
+function sumArray(array) {
+  if (array) {
+    array.sort(function(a,b) { return a-b });
+    var newAry = array.slice(1,-1)
+    return newAry.reduce(function(acc,val) { return acc + val},0);
+  } else {
+    return 0;
+  }
+}
