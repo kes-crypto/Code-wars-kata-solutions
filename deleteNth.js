@@ -67,3 +67,13 @@ function deleteNth(arr,n){
   })
   return new_arr;
 }
+//sol5
+function deleteNth(arr,n){
+  new_arr = []
+  arr.forEach((element) => {
+    if (new_arr.filter(i => i === element).length < n){
+      new_arr.push(element);
+    }
+  })
+  return new_arr;
+}
