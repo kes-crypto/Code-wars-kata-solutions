@@ -33,3 +33,27 @@ const deleteNth = (a, x) => {
   let m = {};
   return a.filter( v => (m[v] = m[v]+1||1) <= x );
 }
+//sol3
+function deleteNth(arr,x){
+  while (true) {
+    for (var i = 0; i < arr.length; ++i) {
+      var count = 0;
+      
+      for (var j = 0; j < arr.length; ++j) {
+      
+        if (arr[i] === arr[j]) {
+          ++count;
+          
+          if (count > x) {
+            arr.splice(j, 1);
+            break;
+          }
+        }        
+      }
+      if (j !== arr.length) break;      
+    }
+    if (i === arr.length) break;
+  }
+  
+  return arr;
+}
