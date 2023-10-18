@@ -24,3 +24,12 @@ function firstNonConsecutive(arr) {
 const firstNonConsecutive = array =>
   (val => val % 1 === 0 ? val : null)
   (array.find((val, idx) => val !== array[0] + idx));
+//sol2
+function firstNonConsecutive (arr) {
+  for (var i = 0; i < arr.length; i++) {
+    if ((arr[i]-arr[0]) !== i) {
+      return arr[i]
+    }
+  }
+  return null
+}
