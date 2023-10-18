@@ -20,3 +20,7 @@ function firstNonConsecutive(arr) {
     }
     return null;
 }
+//sol1
+const firstNonConsecutive = array =>
+  (val => val % 1 === 0 ? val : null)
+  (array.find((val, idx) => val !== array[0] + idx));
