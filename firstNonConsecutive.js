@@ -53,3 +53,15 @@ function firstNonConsecutive (arr) {
   // return first non consec number not equal to undefined or first is null
   return first !== undefined ? first : null
 }
+//sol4
+function firstNonConsecutive (arr) {
+  var length = arr.length; //get length
+  var val = arr[0]; //base comparison value variable
+  for(var i = 1; i < length; i++) { //comparison
+    if(arr[i] != val + 1) {
+      return arr[i];
+    }
+    val++;
+  }
+  return null; //default return
+}
