@@ -17,3 +17,5 @@ var number = function(array) {
     return (index + 1) + ": " + line;
   });
 }
+//sol2
+let number = (a) => a.map((v, i) => `${i + 1}: ${v}`)
