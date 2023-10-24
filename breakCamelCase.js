@@ -22,3 +22,13 @@ function solution(string) {
   return(string.replace(/([A-Z])/g, ' $1'));
 
 }
+//sol2
+function solution(string) {
+  string = string.split('').map(function (el) {
+    if (el === el.toUpperCase()) {
+      el = ' ' + el
+    }
+    return el
+  })
+  return string.join('')
+}
