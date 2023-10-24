@@ -17,3 +17,8 @@ function solution(string) {
   }
   return newStr.join("");
 }
+//sol1
+function solution(string) {
+  return(string.replace(/([A-Z])/g, ' $1'));
+
+}
