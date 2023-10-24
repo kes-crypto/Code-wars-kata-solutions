@@ -32,3 +32,9 @@ function solution(string) {
   })
   return string.join('')
 }
+//sol3
+const solution = string => {
+  return [...string].map((char) => {
+    return (char === char.toUpperCase()) ? ` ${char}` : char;
+  }).join('');
+}
