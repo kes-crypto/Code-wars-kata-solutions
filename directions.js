@@ -85,3 +85,22 @@ function dirReduc(arr){
   }
   return directions;
 }
+//sol4
+function dirReduc(arr){
+  const dir = {
+    "NORTH": "SOUTH",
+    "EAST": "WEST",
+    "SOUTH": "NORTH",
+    "WEST": "EAST"
+  }
+  
+  const stack = []
+  for (let i = 0; i < arr.length; i++) {
+    if (stack[stack.length-1] === dir[arr[i]]) {
+      stack.pop()
+    } else {
+      stack.push(arr[i])
+    }
+  }
+  return stack
+}
