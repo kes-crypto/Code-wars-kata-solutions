@@ -104,3 +104,16 @@ function dirReduc(arr){
   }
   return stack
 }
+//sol5
+function dirReduc(arr)
+{
+	var ma={"NORTH":1,"SOUTH":-1,"EAST":2,"WEST":-2};
+	for(var i=0; i<arr.length-1; i++)
+	{
+		if(ma[arr[i]]+ma[arr[i+1]]) continue;
+		arr.splice(i,2);
+		i=-1;
+	}
+	return arr;
+	
+}
