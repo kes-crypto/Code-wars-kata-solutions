@@ -58,3 +58,11 @@ function dirReduc(arr) {
   while (pattern.test(str)) str = str.replace(pattern,'');
   return str.match(/(NORTH|SOUTH|EAST|WEST)/g)||[];
 }
+//sol2
+function dirReduc(arr){
+	var opposite = { "SOUTH":"NORTH", "NORTH":"SOUTH", "WEST":"EAST", "EAST":"WEST"}
+	return arr.reduce(function (a, b, i) {
+  	opposite[a.slice(-1)] === b ? a.pop() : a.push(b)
+  	return a
+  }, [])
+}
