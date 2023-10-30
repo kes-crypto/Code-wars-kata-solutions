@@ -121,3 +121,31 @@ function duplicateEncode(word){
   
   return result.join('');
 }
+//sol5
+function duplicateEncode(word){
+    //make word lowercase
+    //create an empty string to return
+    //initiate a count variable
+    //nested loop to see if letter is duplicated
+    //every time letter is duplicated add to count total
+    //if count total > 1 add ) to the string
+    //otherwise add ( to the string
+    
+    const lowercase = word.toLowerCase();
+    let result = '';
+    
+    for (let i = 0; i < lowercase.length; i++) {
+      let count = 0;
+      for (let j = 0; j < lowercase.length; j++) {
+        if (lowercase[i] === lowercase[j]) {
+          count++
+        }
+      }
+      if (count > 1) {
+        result += ')'
+      } else {
+        result += '('
+      }
+    }
+    return result 
+}
