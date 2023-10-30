@@ -99,3 +99,25 @@ function duplicateEncode(word) {
         console.log(allData)
         return str;
     }
+//sol4
+function duplicateEncode(word){
+  function count(word, char) {
+    var result = 0;
+    for (var index = 0, len = word.length; index < len; index++) {
+      if (word[index] == char) result++;
+    }
+      
+    return result;
+  }
+    
+  var result = [];
+  var lowerCasedWord = word.toLowerCase();
+  for (var index = 0, len = lowerCasedWord.length; index < len; index++) {
+    if (count(lowerCasedWord, lowerCasedWord[index]) > 1)
+      result.push(")");
+    else
+      result.push("(");
+  }  
+  
+  return result.join('');
+}
