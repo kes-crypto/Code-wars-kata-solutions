@@ -51,3 +51,51 @@ function duplicateEncode(word) {
     return letters.some(function(x, j) { return x === c && i !== j }) ? ')' : '('
   }).join('')
 }
+//sol3
+function duplicateEncode(word) {
+        var str = '';
+        var allData = [];
+        var toolflag=false;
+        for (var i = 0; i < word.length; i++) {
+        //    if(word.charAt(i)>'A'&&word.charAt(i)<'Z'){
+        //        toolflag=true;
+        //    }
+            if (allData.length) {
+                for (var j = 0; j < allData.length; j++) {
+                    if (word.charAt(i).toLowerCase() == allData[j][0].toLowerCase()) {
+                        allData[j][1] = 1 + parseInt(allData[j][1]);
+                        break;
+                    } else if(j==(allData.length-1)){
+                        var data = [];
+                        data.push(word.charAt(i), 1);
+                        allData.push(data);
+                       break;
+                    }else{continue;}
+                }
+            } else {
+                var data = [];
+                data.push(word.charAt(i), 1);
+                allData.push(data);
+            }
+        }
+        // console.log(allData)
+        for (var i = 0; i < word.length; i++) {
+          //  console.log(allData)
+          for(var j=0;j<allData.length;j++){
+            if(word.charAt(i).toLowerCase()==allData[j][0].toLowerCase()){
+                if (allData[j][1] == 1) {
+                str += '(';
+            } else {
+                str += ')';
+            }
+            }
+          }
+         
+           
+        }
+        // if(toolflag){
+        //     str+=",should ignore case";
+        // }
+        console.log(allData)
+        return str;
+    }
