@@ -44,3 +44,10 @@ function duplicateEncode(word){
     return unique;
 
 }
+//sol2
+function duplicateEncode(word) {
+  var letters = word.toLowerCase().split('')
+  return letters.map(function(c, i) {
+    return letters.some(function(x, j) { return x === c && i !== j }) ? ')' : '('
+  }).join('')
+}
