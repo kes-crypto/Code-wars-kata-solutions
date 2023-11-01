@@ -70,3 +70,24 @@ function topThreeWords(text) {
           .sort(function(a,b){return words[b]-words[a]})
           .slice(0,3)
 }
+//sol3
+function topThreeWords(text) {
+  const idx = {};
+  
+  const matches = text
+    .replace(/\s'\s/gi, '')
+    .toLowerCase()
+    .match(/[a-z'\-]+/gi);
+  
+  if (!matches) {
+    return [];
+  }
+  
+  matches
+    .forEach(w => idx[w] = idx[w] && idx[w]+1 || 1);
+    
+  return Object
+    .keys(idx)
+    .sort((a, b) => idx[b] - idx[a] || (b > a ? -1 : 1))
+    .slice(0, 3);
+}
