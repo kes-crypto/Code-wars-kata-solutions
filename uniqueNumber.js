@@ -14,3 +14,11 @@ function findUniq(arr) {
   const unique = [...array]
   return unique
 }
+
+//sol1
+const findUniq = (list, sorted = [...list].sort()) => 
+   sorted.find(
+     (item, index) => 
+        item !== sorted?.[index + 1] 
+        && item !== sorted?.[index - 1]
+   );
