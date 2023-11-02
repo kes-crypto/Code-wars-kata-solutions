@@ -29,3 +29,7 @@ const reverseSeq = n => {
   
   return answer;            //return answer;
 };
+function reverse(n){
+return n.split().reverse().join()
+    
+}
