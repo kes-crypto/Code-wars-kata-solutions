@@ -35,3 +35,14 @@ function findUniq(arr) {
 function findUniq(arr) {
   return arr.find(e => arr.lastIndexOf(e) === arr.indexOf(e))
 }
+//sol4
+function findUniq(arr) { 
+  if(arr[0] == arr[arr.length-1])
+  {
+    return arr.filter(a => a != arr[0])[0];
+  }
+  else
+  {
+    return arr.filter(a => a != arr[1])[0];
+  }
+}
