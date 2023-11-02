@@ -7,3 +7,10 @@ It’s guaranteed that array contains at least 3 numbers.
 
 The tests contain some very huge arrays, so think about performance.
 */
+
+//Failed attempt, eliminated duplicate elements
+function findUniq(arr) {
+  const array = new Set(arr)
+  const unique = [...array]
+  return unique
+}
