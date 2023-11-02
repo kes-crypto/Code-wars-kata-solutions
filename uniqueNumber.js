@@ -31,3 +31,7 @@ function findUniq(arr) {
     return arr[0]
   } 
 }
+//sol3
+function findUniq(arr) {
+  return arr.find(e => arr.lastIndexOf(e) === arr.indexOf(e))
+}
