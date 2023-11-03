@@ -34,3 +34,10 @@ function pigIt(str) {
     return word.slice(1) + firstLetter + 'ay';
   }).join(' ');
 }
+//sol3
+function pigIt(str){
+  //Code here
+  return str.split(' ').map(word => {
+    return word.substring(1) + word[0] + 'ay';
+  }).join(' ');
+}
