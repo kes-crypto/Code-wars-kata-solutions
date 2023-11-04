@@ -63,3 +63,15 @@ function narcissistic( value ) {
   return num === value;
   
 }
+//sol3
+function narcissistic(number) {
+    var arrayOfDigitals = number.toString().split(''),
+        numberLength = arrayOfDigitals.length,
+        sum = 0;
+
+    arrayOfDigitals.forEach(function(digit) {
+        sum += Math.pow(digit, numberLength);
+    });
+
+    return sum === number;
+}
