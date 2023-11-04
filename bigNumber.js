@@ -50,3 +50,16 @@ function narcissistic(value) {
               .reduce( (a,b)=> +a + +b) 
                === value
 }
+//sol2
+function narcissistic( value ) {
+  // Code me
+  var nbDigit = value.toString().length;
+  var stringNb = value.toString();
+  var num = 0;
+  
+  for(var i = 0; i < nbDigit ; ++i)
+    num += Math.pow(parseInt(stringNb.charAt(i)), nbDigit); 
+    
+  return num === value;
+  
+}
