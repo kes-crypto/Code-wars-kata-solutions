@@ -7,3 +7,18 @@ The returned format must be correct in order to complete this challenge.
 
 Don't forget the space after the closing parentheses!
 */
+function createPhoneNumber(numbers) {
+    let firstpart = ""
+    let secondpart = ""
+    let thirdpart = ""
+    for (var i = 0; i < numbers.length; i++) {
+        if (i < 3) {
+            firstpart += numbers[i].toString()
+        } else if (i >= 3 && i < 6) {
+            secondpart += numbers[i].toString()
+        } else if (i >= 6) {
+            thirdpart += numbers[i].toString()
+        }
+    }
+    return `(${firstpart}) ${secondpart}-${thirdpart}`
+} 
