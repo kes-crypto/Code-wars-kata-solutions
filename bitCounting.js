@@ -14,3 +14,16 @@ var countBits = function(n) {
 };
 //sol1
 countBits = n => n.toString(2).split('0').join('').length;
+//sol2
+var countBits = function(n) {
+  return n.toString(2).split('0').join("").length;
+};
+countBits(0);
+
+/* here the
+1. n.toString(2) method converts n into a binary string.
+2. split('0') makes array out of the binary string splitting only at 0's
+ and hence returning an array of only 1 present in binary of n.
+3. join('') joins all one and making a string of 1's.
+4. length finds length of the string actually counting number of 1's in n.
+*/
