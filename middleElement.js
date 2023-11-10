@@ -28,3 +28,9 @@ var gimme = function (inputArray) {
 function gimme(a) {
   return a.indexOf(a.concat().sort(function(a, b) { return a - b })[1])
 }
+//sol2
+var gimme = function (inputArray) {
+ var order = inputArray.slice().sort(function(a,b) { return a-b;});
+ return inputArray.indexOf(order[1]);
+  
+};
