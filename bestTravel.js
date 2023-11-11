@@ -78,3 +78,12 @@ function chooseBestSum(t, k, ls){
         .filter(item => item <= t)
         .sort((a,b) => b-a)[0] || null
 }
+//sol3
+function chooseBestSum(t, k, ls, r = 0, m = 0) {
+    if(k>0&&ls.length<k||r>t) return null;
+    if(k==0) return Math.max(r,m);
+    for(let a=0; a<ls.length; a++) {
+      m=Math.max(chooseBestSum(t, k-1, ls.slice(a+1), r+ls[a], m),m);
+    }
+    return !m?null:m;
+}
