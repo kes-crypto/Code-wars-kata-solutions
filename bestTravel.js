@@ -43,3 +43,22 @@ function chooseBestSum(t, k, ls) {
 recurseTowns();
 return biggestCount || null;
 }
+//sol1
+function combinationUtil(t, k, ls, store, start, index) {
+  if (index === k) return store.reduce((acc, cur) => acc + cur);
+
+  let max = null;
+  for (let i = start; i < ls.length && ls.length - i >= k - index; i++) {
+    store[index] = ls[i];
+    const sum = combinationUtil(t, k, ls, store, i + 1, index + 1);
+    if (sum !== null && sum <= t) max = Math.max(max, sum);
+  }
+
+  return max;
+}
+
+function chooseBestSum(t, k, ls) {
+  const store = new Array(k);
+
+  return combinationUtil(t, k, ls, store, 0, 0);
+}
