@@ -32,3 +32,8 @@ function sortAnimal(animal) {
 function sortAnimal(animals) {
     return animals.slice().sort((a,b)=>a.name.localeCompare(b.name)).sort((a,b)=>a.numberOfLegs-b.numberOfLegs);
 }
+//sol3
+function sortAnimal(animals) {
+  const arr = animals.slice(0);
+  return arr.sort((a,b) => a.numberOfLegs - b.numberOfLegs || a.name.localeCompare(b.name));
+}
