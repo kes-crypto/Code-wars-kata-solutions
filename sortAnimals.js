@@ -14,3 +14,17 @@ const compareAnimals = (a, b) =>
   
 const sortAnimal = animals =>
   animals ? animals.slice().sort(compareAnimals) : null
+//sol1
+function sortAnimal(animal) {
+  if (animal) {
+   return [...animal].sort((a, b) => {
+     if (a.numberOfLegs === b.numberOfLegs){
+        return a.name.localeCompare(b.name)
+     } else {
+        return a.numberOfLegs - b.numberOfLegs
+     }
+    })
+  } else {
+    return null
+  }
+}
