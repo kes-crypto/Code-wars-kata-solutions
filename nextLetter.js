@@ -11,3 +11,15 @@ Examples
 "zoo"                 -->  "app"
 "zzZAaa"              -->  "aaABbb"
 */
+function nextLetter(str) {
+  return str.replace(/[a-zA-Z]/g, (letter) => {
+    switch (letter) {
+      case 'z':
+        return 'a';
+      case 'Z':
+        return 'A';
+      default:
+        return String.fromCharCode(letter.charCodeAt() + 1);
+    }
+  });
+}
