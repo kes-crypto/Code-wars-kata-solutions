@@ -37,3 +37,20 @@ function sortAnimal(animals) {
   const arr = animals.slice(0);
   return arr.sort((a,b) => a.numberOfLegs - b.numberOfLegs || a.name.localeCompare(b.name));
 }
+//sol4
+function sortAnimal(animal) {
+  if (animal==null)
+    return null;
+  var arr=[];
+  for (var i=0; i<animal.length; ++i)
+    arr.push(animal[i]);
+  for (var i=0; i<arr.length-1; ++i)
+    for (var j=i+1; j<arr.length; ++j)
+    if(arr[i].numberOfLegs>arr[j].numberOfLegs||(arr[i].numberOfLegs==arr[j].numberOfLegs && arr[i].name>arr[j].name))
+    {
+      var c=arr[i];
+      arr[i]=arr[j];
+      arr[j]=c;
+    }
+  return arr;
+}
