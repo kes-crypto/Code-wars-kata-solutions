@@ -33,3 +33,19 @@ const nextLetter = phrase => (
     return nextUnicode(letter)
   })
 )
+//sol2
+function nextLetter(str) {
+    let arr = [...str];
+    for(i=0; i<arr.length; i++){
+        if ((arr[i]>='a' && arr[i] <'z') ||
+            (arr[i]>='A' && arr[i] <'Z'))
+        arr[i] = String.fromCharCode(arr[i].charCodeAt(0)+1); 
+        else{
+            if (arr[i] == 'z') arr[i]='a';
+            if (arr[i] == 'Z') arr[i]='A';
+        }
+        
+    };
+
+  return arr.join('');
+}
