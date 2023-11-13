@@ -28,3 +28,7 @@ function sortAnimal(animal) {
     return null
   }
 }
+//sol2
+function sortAnimal(animals) {
+    return animals.slice().sort((a,b)=>a.name.localeCompare(b.name)).sort((a,b)=>a.numberOfLegs-b.numberOfLegs);
+}
