@@ -23,3 +23,13 @@ function nextLetter(str) {
     }
   });
 }
+//sol1
+const nextUnicode = letter => String.fromCharCode(letter.charCodeAt() + 1)
+
+const nextLetter = phrase => (
+  phrase.replace(/[a-zA-Z]/g, letter => {
+    if (letter === 'z') return 'a'
+    if (letter === 'Z') return 'A'
+    return nextUnicode(letter)
+  })
+)
