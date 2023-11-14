@@ -45,3 +45,11 @@ function towerBuilder(nFloors) {
   }
   return result;
 }
+//sol2
+function towerBuilder(Fl) {
+  let arr = [];
+  for (var i = 0; i < Fl; i++){
+    arr[i] = " ".repeat(Fl-i-1) + "*".repeat(i*2+1) + " ".repeat(Fl-i-1)
+  }
+  return arr
+}
