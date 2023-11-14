@@ -39,3 +39,8 @@ function sum (numbers) {
 };
 //sol2
 const sum = n => n.reduce((a,b) => a+b, 0);
+//sol3
+function sum (numbers) {
+    "use strict";
+    return numbers.length == 0 ? 0 : numbers.shift() + sum(numbers);
+};
