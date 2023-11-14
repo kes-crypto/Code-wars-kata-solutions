@@ -35,3 +35,13 @@ function towerBuilder(nFloors) {
   // Reverse the array.
   return finalArray.reverse();
 }
+//sol1
+function towerBuilder(nFloors) {
+  var result = [];
+  var starNumber = 1;
+  for (i=1; i<=nFloors; i++) {
+    result[i-1] = " ".repeat(nFloors-i) + "*".repeat(starNumber) + " ".repeat(nFloors-i);
+    starNumber += 2;
+  }
+  return result;
+}
