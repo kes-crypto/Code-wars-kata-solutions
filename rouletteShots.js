@@ -19,3 +19,11 @@ You must return the probability rounded to two decimal places i.e. 0.05 or 0.81
 
 
 */
+function getChance(n, x, a){ 
+  probability = 1
+  for (i = 0;i < a;i++) {
+    probability *= (n - x) / n
+    n -= 1
+  }
+  return Math.round(probability * 100) / 100
+}
