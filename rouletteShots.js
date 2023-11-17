@@ -27,3 +27,10 @@ function getChance(n, x, a){
   }
   return Math.round(probability * 100) / 100
 }
+//sol1
+function getChance(n, x, a){ 
+  var mul=1;
+  for (var i=0; i<a; ++i)
+    mul*=(1-x/(n-i));
+  return +mul.toFixed(2);
+}
