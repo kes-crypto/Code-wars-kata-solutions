@@ -34,3 +34,14 @@ function getChance(n, x, a){
     mul*=(1-x/(n-i));
   return +mul.toFixed(2);
 }
+//sol2
+function getChance(n, x, a) { 
+  let safeShots = n - x
+  let probability = 1.0
+  
+  for (let i = 0; i < a; i++) {
+    probability *= (safeShots - i) / (n - i);
+  }
+  
+  return parseFloat(probability.toFixed(2))
+}
