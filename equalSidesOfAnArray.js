@@ -69,3 +69,18 @@ function findEvenIndex(arr)
     return sum(arr.slice(0, i)) === sum(arr.slice(i+1,arr.length));
   });
 }
+//sol4
+function findEvenIndex(arr)
+{
+	var leftsum = 0;
+  var rightsum = 0;
+  for(var i = 0; i < arr.length; i++) {
+ 		rightsum += arr[i]; 
+  }
+  for(i = 0; i < arr.length; i++) {
+  	rightsum -= arr[i];
+    if(leftsum === rightsum) return i;
+ 		leftsum += arr[i];
+  }
+  return -1;
+}
