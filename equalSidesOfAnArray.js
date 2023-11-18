@@ -33,3 +33,16 @@ const  findEvenIndex = (arr) => {
   const total = arr.reduce((a,b)=> a+b , 0);
   return arr.findIndex((x, i, arr) => (total - (sum += x)) * 2 + x === total) ;
 }
+//sol1
+function findEvenIndex(arr)
+{
+  var left = 0, right = arr.reduce(function(pv, cv) { return pv + cv; }, 0);
+  for(var i = 0; i < arr.length; i++) {
+      if(i > 0) left += arr[i-1];
+      right -= arr[i];
+      
+      if(left == right) return i;
+  }
+  
+  return -1;
+}
