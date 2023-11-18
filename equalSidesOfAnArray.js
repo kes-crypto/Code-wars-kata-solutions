@@ -28,3 +28,8 @@ The lowest index N where the side to the left of N is equal to the side to the r
 Note:
 If you are given an array with multiple answers, return the lowest correct index.
 */
+const  findEvenIndex = (arr) => {
+  let sum = 0;
+  const total = arr.reduce((a,b)=> a+b , 0);
+  return arr.findIndex((x, i, arr) => (total - (sum += x)) * 2 + x === total) ;
+}
