@@ -58,3 +58,48 @@ array[-1.5];   // 2
 array[-0.05];  // 1
 array[627.59]; // 2
 */
+//First try
+function array(arr) {
+
+
+
+  const checkIfnegative = (element) => element <= -1;
+  const checkIfSingleDigit = (element) => element > 9;
+  if (arr.some(checkIfnegative)) {
+    return null;
+  } else if (arr.some(checkIfSingleDigit)) {
+    return null;
+
+
+  } 
+
+
+
+
+  arr = arr
+    .map((num) => {
+      return num.toString();
+    })
+    .join("");
+  
+
+
+
+  let num1;
+
+
+
+  if (arr == []) {
+    return null;
+  } else {
+    
+    num1 = parseFloat(arr) + 1;
+    num1 = num1
+      .toString()
+      .split("")
+      .map(function (i) {
+        return parseFloat(i);
+      });
+  }
+  return num1;
+}
