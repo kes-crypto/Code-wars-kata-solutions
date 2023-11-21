@@ -115,3 +115,11 @@ const array = new Proxy([1, false, null, Infinity, 500, "string"], {
     }
   }
 });
+//sol2
+let array = new Proxy([1, false, null, Infinity, 500, "string"], {
+  get: (target, name) => {
+    if (name in target) return target[name];
+    let indx = Math.round(Math.abs(name)) % 6;
+    return target[name < 0 ? (6-indx) % 6 : indx];
+  }
+});
