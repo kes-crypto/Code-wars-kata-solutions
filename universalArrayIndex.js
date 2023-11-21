@@ -103,3 +103,15 @@ function array(arr) {
   }
   return num1;
 }
+//sol1
+const array = new Proxy([1, false, null, Infinity, 500, "string"], {
+  get(t, k) {
+    if (!isNaN(k)) {
+      if (k % 1) k = Math.sign(k) * Math.round(Math.abs(k));
+      k = (k % t.length + t.length) % t.length;
+      return t[k];
+    } else {
+      return Reflect.get(...arguments);
+    }
+  }
+});
