@@ -23,3 +23,8 @@ function divisors(integer) {
     if (divisors.length === 0) return '' + integer + ' is prime';
     return divisors;
 }
+//sol2
+function divisors(integer) {
+  var divisors = [...Array(integer).keys()].slice(2, integer).filter(div => integer % div == 0);
+  return divisors.length > 0 ? divisors : integer + ' is prime';
+};
