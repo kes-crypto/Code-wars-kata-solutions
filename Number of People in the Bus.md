@@ -10,4 +10,4 @@ Please keep in mind that the test cases ensure that the number of people in the 
 
 The second value in the first integer array is 0, since the bus is empty in the first bus stop.
 
-[solution](../solution/Number\%20of\%20People\%20in\%20the\%20Bus.js)
+[solution](bus.js)
