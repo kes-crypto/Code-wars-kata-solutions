@@ -4,4 +4,4 @@ Examples (input --> output):
 "hello case" --> "HelloCase"
 "camel case word" --> "CamelCaseWord"
 
-[solution](bus.js)
+[solution](CamelCaseMethod.js)
