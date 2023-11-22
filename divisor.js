@@ -28,3 +28,16 @@ function divisors(integer) {
   var divisors = [...Array(integer).keys()].slice(2, integer).filter(div => integer % div == 0);
   return divisors.length > 0 ? divisors : integer + ' is prime';
 };
+//sol3
+function divisors(integer) 
+{
+	var arr=[];
+
+	for(var i=2; i<integer; i++)
+	{
+		if(integer%i)	continue;
+		arr.push(i);
+	}
+
+	return arr.length ? arr : (integer+" is prime");
+};
