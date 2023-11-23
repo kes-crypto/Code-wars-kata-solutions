@@ -65,3 +65,5 @@ function smileyHasValidMouth(s) {
 function countSmileys(arr) {
   return arr.filter(x => /^[:;][-~]?[)D]$/.test(x)).length;
 }
+//sol3
+countSmileys=arr=> arr.filter(v => /(:|;)(-|~)?(\)|D)/.test(v)).length; 
