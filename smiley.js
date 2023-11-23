@@ -61,3 +61,7 @@ function smileyHasValidMouth(s) {
   }
   return false;
 }
+//sol2
+function countSmileys(arr) {
+  return arr.filter(x => /^[:;][-~]?[)D]$/.test(x)).length;
+}
