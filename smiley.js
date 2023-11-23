@@ -67,3 +67,16 @@ function countSmileys(arr) {
 }
 //sol3
 countSmileys=arr=> arr.filter(v => /(:|;)(-|~)?(\)|D)/.test(v)).length; 
+//sol4
+function countSmileys(arr) {
+  console.log(arr)
+  let result = []
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == ':D' || arr[i] == ';D' || arr[i] == ':-D' || arr[i] == ':~D' || arr[i] == ';-D' || arr[i] == ';~D') {
+      result.push(arr[i])
+    } else if (arr[i] == ':)' || arr[i] == ';)' || arr[i] == ':-)' || arr[i] == ':~)' || arr[i] == ';-)' || arr[i] == ';~)') {
+      result.push(arr[i])
+    }
+  }
+  return result.length
+}
