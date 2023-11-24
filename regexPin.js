@@ -42,3 +42,10 @@ function validatePIN (pin) {
 */ 
 
 const validatePIN = pin => /^\d{4}$|^\d{6}$/.test(pin);
+//sol4
+function validatePIN (pin) {
+  if (pin.length === 4 || pin.length ===6) {
+    return pin.split('').every((num) => !isNaN(parseInt(num)));
+  }
+  return false;
+}
