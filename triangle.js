@@ -6,3 +6,9 @@ function isTriangle(a,b,c) {
   var sides = [a, b, c].sort();
   return (sides[0] + sides[1] > sides[2]);
 }
+//sol2
+function isTriangle(a,b,c)
+{
+    return Math.min(a+b,a+c,b+c) > Math.max(a,b,c) ? true:false
+  
+}
