@@ -20,3 +20,7 @@ var max = function(list){
 //sol2 super clean
 const min = $ => $.sort((a, b)=> a - b)[0]
 const max = $ => $.sort((a, b)=> b - a)[0]
+//sol3
+const min = list => list.reduce((a, b) => a < b ? a : b)
+
+const max = list => list.reduce((a, b) => a > b ? a : b)
