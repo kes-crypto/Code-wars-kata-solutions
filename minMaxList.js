@@ -17,3 +17,6 @@ var max = function(list){
     list.sort((a, b) => (b - a));
     return list[0];
 }
+//sol2 super clean
+const min = $ => $.sort((a, b)=> a - b)[0]
+const max = $ => $.sort((a, b)=> b - a)[0]
