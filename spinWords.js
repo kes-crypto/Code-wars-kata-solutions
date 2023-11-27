@@ -46,3 +46,5 @@ function revertWord(word){
     return word.split("").reverse().join("")
   }
 }
+//sol3
+spinWords = s => s.split(' ').map(e => e.length > 4 ? e.split('').reverse().join('') : e).join(' ');
