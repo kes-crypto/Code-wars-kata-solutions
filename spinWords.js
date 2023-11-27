@@ -16,3 +16,33 @@ function spinWords(str){
     .map(word => word.length >= 5 ? word.split('').reverse().join('') : word)
     .join(' ');
 }
+//sol2
+function spinWords(phraseOrWord){
+  //TODO Have fun :)
+  //split by space
+  const arrayWord = phraseOrWord.split(" ");
+  if (arrayWord.length == 1) {
+    return canRevert(phraseOrWord)
+           ? revertWord(phraseOrWord)
+           : phraseOrWord;
+  }
+  else {
+    let spinnedArray = arrayWord.map(elem => {
+      return canRevert(elem)
+             ? revertWord(elem)
+             : elem
+    })
+    
+    return spinnedArray.join(" ")
+  }
+}
+
+function canRevert(word) {
+  return word.length >= 5
+}
+
+function revertWord(word){
+  if (word.length) {
+    return word.split("").reverse().join("")
+  }
+}
