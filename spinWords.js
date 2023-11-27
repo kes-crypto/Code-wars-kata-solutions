@@ -10,3 +10,9 @@ const spinWords = (string) => {
   })]
   )[0].join(" ")
 }
+//sol1
+function spinWords(str){
+  return str.split(' ')
+    .map(word => word.length >= 5 ? word.split('').reverse().join('') : word)
+    .join(' ');
+}
