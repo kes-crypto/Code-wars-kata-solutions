@@ -15,3 +15,13 @@ function friend(friends){
 }
 //sol2
 friend = f => f.filter(e => e.length == 4);
+//sol3
+function friend(friends){
+  let goodFriends = [];
+  for(let i = 0; i < friends.length; i++){
+    if (friends[i].length === 4){
+      goodFriends.push(friends[i]);
+    };
+  };
+  return goodFriends;
+}
