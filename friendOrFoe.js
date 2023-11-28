@@ -13,3 +13,5 @@ function friend(friends){
   
   return realFriends
 }
+//sol2
+friend = f => f.filter(e => e.length == 4);
