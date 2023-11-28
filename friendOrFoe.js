@@ -37,3 +37,13 @@ function friend(friends){
 
   return outArr;
 }
+//sol5
+function friend(friends){
+  let goodFriends = [];
+  for(let i = 0; i < friends.length; i++){
+    if (friends[i].length === 4){
+      goodFriends.push(friends[i]);
+    };
+  };
+  return goodFriends;
+}
