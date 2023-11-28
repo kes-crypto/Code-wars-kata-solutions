@@ -25,3 +25,15 @@ function friend(friends){
   };
   return goodFriends;
 }
+//sol4
+function friend(friends){
+    let outArr = [];
+
+  friends.forEach((item) => {
+    if (item.length == 4) {
+      outArr.push(item);
+    }
+  });
+
+  return outArr;
+}
