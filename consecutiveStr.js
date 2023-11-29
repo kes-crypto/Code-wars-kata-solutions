@@ -1,4 +1,3 @@
-
 function longestConsec(strarr, k) {
   let arrLength = strarr.length;
   let arr = [];
@@ -15,4 +14,17 @@ function longestConsec(strarr, k) {
  return arr.reduce(function (a, b) {
         return a.length > b.length ? a : a.length == b.length ? a : b;
     });
+}
+//sol1
+function longestConsec(strarr, k) {
+  if (k <= 0 || k > strarr.length) {
+    return '';
+  }
+  
+  return strarr.reduce((long, item, i) => {
+    const currString = strarr.slice(i, i + k).join('');
+    return (currString.length > long.length)
+      ? currString
+      : long;
+  }, '');
 }
