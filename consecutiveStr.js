@@ -43,3 +43,13 @@ function longestConsec(strarr, k) {
     }
     return result;
 }
+//sol3
+function longestConsec(strarr, k) {
+  const n = strarr.length
+  
+  return k > 0 && strarr
+    .slice(0, n-k+1)
+    .map((_, i) => strarr.slice(i, i+k).join(""))
+    .reduce((acc, curr) => curr.length > acc.length ? curr : acc, "") || ""
+    
+}
