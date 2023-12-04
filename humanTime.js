@@ -47,3 +47,6 @@ var pad = function(val){
 
 return pad(hours) + ":" +pad(minutes) + ":" + pad(seconds);
 }
+//sol3
+const humanReadable = seconds =>
+  [seconds / 3600 ^ 0, seconds / 60 % 60 ^ 0, seconds % 60].map(val => `${val}`.padStart(2, `0`)).join(`:`);
