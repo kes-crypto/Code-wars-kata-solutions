@@ -12,3 +12,7 @@ function removeChar(str){
   }
   return newStr
 };
+//sol1
+function removeChar(str) {
+  return str.slice(1, -1);
+}
