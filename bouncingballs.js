@@ -26,3 +26,12 @@ function bouncingBall(h,  bounce,  window) {
   if (bounce > 0 && bounce < 1) while (h > window) rebounds+=2, h *= bounce;
   return rebounds;
 }
+//sol3
+function bouncingBall(h,  bounce,  window) {
+  if(h <= 0 || bounce <= 0 || bounce >= 1 || window >= h){
+    return -1;
+  }
+
+  var newHeight = h * bounce;
+  return bouncingBall(newHeight, bounce, window) + 2;
+}
