@@ -35,3 +35,10 @@ function bouncingBall(h,  bounce,  window) {
   var newHeight = h * bounce;
   return bouncingBall(newHeight, bounce, window) + 2;
 }
+//sol4
+function bouncingBall(h,  bounce,  window) {
+  for(let i = -1; true; i += 2){
+    if(h <= window || h <= 0 || bounce <= 0 || bounce >= 1) return i;
+    h = h * bounce;
+  } 
+}
