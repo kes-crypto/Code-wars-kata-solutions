@@ -45,3 +45,5 @@ For chars = "123456789" and n = 3,the output should be:
  2 3
 4 5 6
   |
+
+[Solution](customChrimas.js)
