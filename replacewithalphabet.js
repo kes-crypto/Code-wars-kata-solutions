@@ -8,3 +8,13 @@ function alphabetPosition(text) {
   .map( letter => alphabet.indexOf(letter) + 1 )
   .join(' ')
 }
+sol2
+function alphabetPosition(text) {
+  const letters = 'abcdefghijklmnopqrstuvwxyz';
+  
+  return text.toLowerCase()
+             .split('')
+             .filter(t => letters.indexOf(t) > -1)
+             .map(t => letters.indexOf(t)+1 || '')
+             .join(' ');
+}
