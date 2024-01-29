@@ -8,7 +8,11 @@ let output = "";
     return output;
 }
 
-
+sol1
 function fakeBin(x) {
     return x.split('').map(n => n < 5 ? 0 : 1).join('');
+}
+sol2
+function fakeBin(x){
+  return x.replace( /[0-4]/g, "0" ).replace( /[5-9]/g, "1" )
 }
