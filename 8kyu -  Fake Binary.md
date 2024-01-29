@@ -2,4 +2,4 @@ Given a string of digits, you should replace any digit below 5 with '0' and any 
 
 Note: input will never be an empty string
 
-(Solution)[fakeBinary.js]
+[solution](fakeBinary.js)
