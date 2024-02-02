@@ -7,4 +7,6 @@ Examples
 
 "The_Stealth-Warrior" gets converted to "TheStealthWarrior"
 
+"King_kong-dreads" gets converted to "KingKongDreads"
+
 [solution](strToCamelCase.js)
