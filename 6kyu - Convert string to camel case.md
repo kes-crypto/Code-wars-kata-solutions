@@ -9,4 +9,7 @@ Examples
 
 "King_kong-dreads" gets converted to "KingKongDreads"
 
+
+"King_kong-dreads" gets converted to "KingKongDreads
+
 [solution](strToCamelCase.js)
