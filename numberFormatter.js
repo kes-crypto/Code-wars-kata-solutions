@@ -23,3 +23,9 @@ function createPhoneNumber(numbers){
 function createPhoneNumber(numbers){
   return numbers.join('').replace(/(...)(...)(.*)/, '($1) $2-$3');
 }
+
+// sol4
+
+function createPhoneNumber(numbers){
+   return numbers.reduce((p,c) => p.replace('x',c), "(xxx) xxx-xxxx");
+}
